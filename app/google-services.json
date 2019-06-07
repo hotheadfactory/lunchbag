@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "986540266954",
+    "firebase_url": "https://lunchbag-back.firebaseio.com",
+    "project_id": "lunchbag-back",
+    "storage_bucket": "lunchbag-back.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:986540266954:android:07eec35dabfd370d",
+        "android_client_info": {
+          "package_name": "com.lunchbag.lunchbag"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "986540266954-nlp1g61150eapke6pv8c0iq52593leks.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCgQlr1HuD3ZSuLsYWAi3TgGYU4Sa1jt04"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "986540266954-nlp1g61150eapke6pv8c0iq52593leks.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
