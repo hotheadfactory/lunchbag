@@ -1,34 +1,42 @@
 {
   "project_info": {
-    "project_number": "986540266954",
-    "firebase_url": "https://lunchbag-back.firebaseio.com",
-    "project_id": "lunchbag-back",
-    "storage_bucket": "lunchbag-back.appspot.com"
+    "project_number": "543260716200",
+    "firebase_url": "https://lunchbag-63f48.firebaseio.com",
+    "project_id": "lunchbag-63f48",
+    "storage_bucket": "lunchbag-63f48.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:986540266954:android:07eec35dabfd370d",
+        "mobilesdk_app_id": "1:543260716200:android:07eec35dabfd370d",
         "android_client_info": {
           "package_name": "com.lunchbag.lunchbag"
         }
       },
       "oauth_client": [
         {
-          "client_id": "986540266954-nlp1g61150eapke6pv8c0iq52593leks.apps.googleusercontent.com",
+          "client_id": "543260716200-tegebitkppr9fpl004ig7chql7vn0sgc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.lunchbag.lunchbag",
+            "certificate_hash": "76d5f08e30b4b308a4139c7b8b3a3bcf7b4f9d36"
+          }
+        },
+        {
+          "client_id": "543260716200-9ohddjbbb2ss968077tfg8dvkfttrr5r.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCgQlr1HuD3ZSuLsYWAi3TgGYU4Sa1jt04"
+          "current_key": "AIzaSyDdhYkC_JPJqQ1Z7AF1EHkTXDeAJIg-mfw"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "986540266954-nlp1g61150eapke6pv8c0iq52593leks.apps.googleusercontent.com",
+              "client_id": "543260716200-9ohddjbbb2ss968077tfg8dvkfttrr5r.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
