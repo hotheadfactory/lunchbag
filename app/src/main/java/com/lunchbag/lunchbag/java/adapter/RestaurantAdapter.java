@@ -21,6 +21,7 @@ import me.zhanghai.android.materialratingbar.MaterialRatingBar;
 /**
  * RecyclerView adapter for a list of Restaurants.
  */
+
 public class RestaurantAdapter extends FirestoreAdapter<RestaurantAdapter.ViewHolder> {
 
     public interface OnRestaurantSelectedListener {

@@ -10,6 +10,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.StringRes;
@@ -222,7 +223,7 @@ public class MainActivity extends AppCompatActivity implements
         // Go to the details page for the selected restaurant
         Intent intent = new Intent(this, RestaurantDetailActivity.class);
         intent.putExtra(RestaurantDetailActivity.KEY_RESTAURANT_ID, restaurant.getId());
-
+        Toast.makeText(MainActivity.this, restaurant.getId(), Toast.LENGTH_SHORT).show();
         startActivity(intent);
         overridePendingTransition(R.anim.slide_in_from_right, R.anim.slide_out_to_left);
     }

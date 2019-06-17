@@ -102,6 +102,25 @@
             tools:text="공대쪽문" />
 
         <TextView
+            android:id="@+id/restaurantCong_divider"
+            style="@style/AppTheme.TextDivider"
+            android:layout_alignTop="@+id/restaurantCategory"
+            android:layout_toRightOf="@+id/restaurantPlace"
+            android:text=" / "
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/restaurantCongestion"
+            style="@style/AppTheme.Subheader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/restaurantCategory"
+            android:layout_below="@+id/restaurantCategory"
+            android:layout_toRightOf="@+id/restaurantCong_divider"
+            android:textColor="@android:color/white"
+            tools:text="혼잡" />
+
+        <TextView
             android:id="@+id/restaurantPrice"
             style="@style/AppTheme.Body1"
             android:layout_width="wrap_content"

@@ -120,6 +120,27 @@ public class RestaurantUtil {
         }
     }
 
+    public static String getCongString(Restaurant restaurant) {
+        return getCongString(restaurant.getCong());
+    }
+
+    public static String getCongString(int cong) {
+        switch (cong) {
+            case 1:
+                return "한가함";
+            case 2:
+                return "적당";
+            case 3:
+                return "혼잡";
+            case 4:
+                return "대기 시간 10분 이상";
+            case 5:
+                return "대기 시간 30분 이상";
+            default:
+                return "혼잡도 정보 없음";
+        }
+    }
+
     private static String getRandomName(Random random) {
         return getRandomString(NAME_FIRST_WORDS, random)
                 + getRandomString(NAME_SECOND_WORDS, random);

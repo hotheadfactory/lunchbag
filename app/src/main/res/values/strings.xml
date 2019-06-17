@@ -32,6 +32,8 @@
 
     <string name="add_random_items">랜덤 항목 추가(디버깅용)</string>
     <string name="sign_out">로그아웃</string>
+    <string name="sign_in">로그인</string>
+    <string name="sign_in_out">로그인/로그아웃</string>
     <string name="divider_bullet">•</string>
     <string name="apply">적용</string>
     <string name="cancel">취소</string>
@@ -93,9 +95,8 @@
     <string-array name="congestion">
         <item>한가함</item>
         <item>적당</item>
-        <item>조금 혼잡</item>
-        <item>많이 혼잡</item>
-        <item>대기 시간 10분~</item>
+        <item>혼잡</item>
+        <item>대기 시간 10분 이상</item>
         <item>대기 시간 30분 이상</item>
     </string-array>
 

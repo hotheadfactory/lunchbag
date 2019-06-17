@@ -8,9 +8,11 @@ import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -19,11 +21,7 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.snackbar.Snackbar;
-import com.lunchbag.lunchbag.R;
-import com.lunchbag.lunchbag.java.adapter.RatingAdapter;
-import com.lunchbag.lunchbag.java.model.Rating;
-import com.lunchbag.lunchbag.java.model.Restaurant;
-import com.lunchbag.lunchbag.java.util.RestaurantUtil;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.EventListener;
@@ -32,6 +30,12 @@ import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.firestore.ListenerRegistration;
 import com.google.firebase.firestore.Query;
 import com.google.firebase.firestore.Transaction;
+import com.lunchbag.lunchbag.R;
+import com.lunchbag.lunchbag.java.adapter.RatingAdapter;
+import com.lunchbag.lunchbag.java.model.Rating;
+import com.lunchbag.lunchbag.java.model.Restaurant;
+import com.lunchbag.lunchbag.java.util.RestaurantUtil;
+import com.lunchbag.lunchbag.java.viewmodel.MainActivityViewModel;
 
 import me.zhanghai.android.materialratingbar.MaterialRatingBar;
 
@@ -49,6 +53,7 @@ public class RestaurantDetailActivity extends AppCompatActivity
     private TextView mPlaceView;
     private TextView mCategoryView;
     private TextView mPriceView;
+    private TextView mCongView;
     private ViewGroup mEmptyView;
     private RecyclerView mRatingsRecycler;
 
@@ -59,6 +64,7 @@ public class RestaurantDetailActivity extends AppCompatActivity
     private ListenerRegistration mRestaurantRegistration;
 
     private RatingAdapter mRatingAdapter;
+    private MainActivityViewModel mViewModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,6 +78,7 @@ public class RestaurantDetailActivity extends AppCompatActivity
         mPlaceView = findViewById(R.id.restaurantPlace);
         mCategoryView = findViewById(R.id.restaurantCategory);
         mPriceView = findViewById(R.id.restaurantPrice);
+        mCongView = findViewById(R.id.restaurantCongestion);
         mEmptyView = findViewById(R.id.viewEmptyRatings);
         mRatingsRecycler = findViewById(R.id.recyclerRatings);
 
@@ -161,6 +168,7 @@ public class RestaurantDetailActivity extends AppCompatActivity
         mPlaceView.setText(restaurant.getPlace());
         mCategoryView.setText(restaurant.getCategory());
         mPriceView.setText(RestaurantUtil.getPriceString(restaurant));
+        mCongView.setText(RestaurantUtil.getCongString(restaurant));
 
         // Background image
         Glide.with(mImageView.getContext())
@@ -168,12 +176,22 @@ public class RestaurantDetailActivity extends AppCompatActivity
                 .into(mImageView);
     }
 
+    private boolean shouldStartSignIn() {
+        return (!mViewModel.getIsSigningIn() && FirebaseAuth.getInstance().getCurrentUser() == null);
+    }
+
     public void onBackArrowClicked(View view) {
         onBackPressed();
     }
 
     public void onAddRatingClicked(View view) {
-        mRatingDialog.show(getSupportFragmentManager(), RatingDialogFragment.TAG);
+        mViewModel = ViewModelProviders.of(this).get(MainActivityViewModel.class);
+        if (shouldStartSignIn()) {
+            Toast.makeText(RestaurantDetailActivity.this, "로그인이 필요합니다!", Toast.LENGTH_SHORT).show();
+        }
+        else {
+            mRatingDialog.show(getSupportFragmentManager(), RatingDialogFragment.TAG);
+        }
     }
 
     @Override

@@ -13,7 +13,6 @@ public class Restaurant {
     public static final String FIELD_PRICE = "price";
     public static final String FIELD_POPULARITY = "numRatings";
     public static final String FIELD_AVG_RATING = "avgRating";
-    public static final String FIELD_CONGESTION = "avgRating";
 
     private String name;
     private String place;
@@ -22,11 +21,12 @@ public class Restaurant {
     private int price;
     private int numRatings;
     private double avgRating;
+    private int congestion;
 
     public Restaurant() {}
 
     public Restaurant(String name, String place, String category, String photo,
-                      int price, int numRatings, double avgRating) {
+                      int price, int numRatings, double avgRating, int congestion) {
         this.name = name;
         this.place = place;
         this.category = category;
@@ -34,6 +34,7 @@ public class Restaurant {
         this.price = price;
         this.numRatings = numRatings;
         this.avgRating = avgRating;
+        this.congestion = congestion;
     }
 
     public String getName() {

@@ -20,12 +20,14 @@
     <FrameLayout
         android:id="@+id/filterBarContainer"
         android:layout_width="match_parent"
-        android:layout_height="115dp"
+        android:layout_height="55dp"
         android:layout_below="@+id/toolbar"
         android:background="@color/colorPrimary"
         android:paddingLeft="12dp"
         android:paddingRight="12dp"
-        android:paddingBottom="12dp">
+        android:paddingBottom="6dp">
+
+
 
         <androidx.cardview.widget.CardView
             android:id="@+id/filterBar"
@@ -93,14 +95,33 @@
 
         </androidx.cardview.widget.CardView>
 
+
+
     </FrameLayout>
+    <FrameLayout
+        android:id="@+id/rouletteButtonContainer"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_below="@+id/filterBarContainer"
+        android:background="@color/colorPrimary"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingBottom="6dp">
+        <Button
+            android:id="@+id/rouletteButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/filterBarContainer"
+            android:text="랜덤 선택 돌리기!" />
+    </FrameLayout>
+
 
     <!-- Main Restaurants recycler -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerRestaurants"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/filterBarContainer"
+        android:layout_below="@+id/rouletteButtonContainer"
         android:background="@android:color/white"
         tools:listitem="@layout/item_restaurant" />
 
