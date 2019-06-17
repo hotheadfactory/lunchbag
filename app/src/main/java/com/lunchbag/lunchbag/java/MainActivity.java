@@ -138,11 +138,11 @@ public class MainActivity extends AppCompatActivity implements
     public void onStart() {
         super.onStart();
 
-        // Start sign in if necessary
+        /** Start sign in if necessary
         if (shouldStartSignIn()) {
             startSignIn();
             return;
-        }
+        }*/
 
         // Apply filters
         onFilter(mViewModel.getFilters());
@@ -176,6 +176,10 @@ public class MainActivity extends AppCompatActivity implements
             case R.id.menu_sign_out:
                 AuthUI.getInstance().signOut(this);
                 startSignIn();
+                break;
+            case R.id.menu_find_location:
+                Intent locationIntent = new Intent(this, LocationActivity.class);
+                startActivity(locationIntent);
                 break;
         }
         return super.onOptionsItemSelected(item);

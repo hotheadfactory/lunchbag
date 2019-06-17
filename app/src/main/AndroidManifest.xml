@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.lunchbag.lunchbag">
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -8,6 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:name="androidx.multidex.MultiDexApplication">
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDF29ptxY09ZFXHSmWF97iwzKI6fLP_6-M" />
 
         <activity android:name=".java.MainActivity"
             android:label="@string/app_name"
@@ -20,11 +28,9 @@
             </intent-filter>
         </activity>
 
-        <!--activity
-            android:name=".java.MainActivity"
-            android:theme="@style/AppTheme.Activity">
-
-        </activity-->
+        <activity
+            android:name=".java.LocationActivity"
+            android:theme="@style/AppTheme" />
 
         <activity
             android:name=".java.RestaurantDetailActivity"

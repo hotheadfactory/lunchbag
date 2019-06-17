@@ -45,7 +45,7 @@
             android:layout_marginTop="8dp"
             android:textColor="@android:color/white"
             android:textStyle="bold"
-            tools:text="Some Restaurant" />
+            tools:text="스피드반점" />
 
         <me.zhanghai.android.materialratingbar.MaterialRatingBar
             android:id="@+id/restaurantRating"
@@ -80,7 +80,7 @@
             android:layout_marginBottom="8dp"
             android:layout_marginTop="8dp"
             android:textColor="@android:color/white"
-            tools:text="Italian" />
+            tools:text="중국집" />
 
         <TextView
             android:id="@+id/restaurantPlace_divider"
@@ -99,7 +99,7 @@
             android:layout_below="@+id/restaurantCategory"
             android:layout_toRightOf="@+id/restaurantPlace_divider"
             android:textColor="@android:color/white"
-            tools:text="San Francisco" />
+            tools:text="공대쪽문" />
 
         <TextView
             android:id="@+id/restaurantPrice"
@@ -112,7 +112,7 @@
             android:layout_marginTop="8dp"
             android:textColor="@android:color/white"
             android:textStyle="bold"
-            tools:text="$$$" />
+            tools:text="~3000원" />
 
     </RelativeLayout>
 
@@ -125,6 +125,7 @@
         android:layout_marginBottom="-28dp"
         android:layout_marginRight="16dp"
         app:srcCompat="@drawable/ic_add_white_24px" />
+
 
     <!-- Ratings -->
     <androidx.recyclerview.widget.RecyclerView
@@ -160,5 +161,27 @@
             android:textColor="@color/greyDisabled" />
 
     </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
+        <Button
+            android:id="@+id/btn_first"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_alignLeft="@+id/ll"
+            android:layout_alignStart="@+id/ll"
+            android:layout_weight="1"
+            android:text="First Tab" />
+
+        <Button
+            android:id="@+id/btn_second"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Second Tab" />
+
+    </LinearLayout>
 </RelativeLayout>

@@ -12,7 +12,6 @@
         android:layout_height="wrap_content"
         android:background="@color/colorPrimary"
         android:theme="@style/AppTheme"
-        app:logo="@drawable/ic_restaurant_white_24px"
         app:popupTheme="@style/Theme.AppCompat.Light.DarkActionBar"
         app:title="@string/app_name"
         app:titleMarginStart="24dp"
@@ -68,7 +67,7 @@
                         android:layout_height="wrap_content"
                         android:text="@string/all_restaurants"
                         android:textColor="@color/greySecondary"
-                        tools:text="Filter" />
+                        tools:text="검색 조건" />
 
                     <TextView
                         android:id="@+id/textCurrentSortBy"
@@ -105,14 +104,12 @@
         android:background="@android:color/white"
         tools:listitem="@layout/item_restaurant" />
 
-    <!-- Shadow below toolbar -->
     <View
         android:layout_width="match_parent"
         android:layout_height="4dp"
         android:layout_below="@+id/filterBarContainer"
         android:background="@drawable/bg_shadow" />
 
-    <!-- Empty list (pizza guy) view -->
     <LinearLayout
         android:id="@+id/viewEmpty"
         android:layout_width="wrap_content"

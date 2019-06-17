@@ -12,14 +12,22 @@
         android:layout_marginBottom="8dp"
         android:text="@string/filter_add_review" />
 
-    <me.zhanghai.android.materialratingbar.MaterialRatingBar
-        android:id="@+id/restaurantFormRating"
-        style="@style/Widget.MaterialRatingBar.RatingBar"
+    <TextView
+        style="@style/AppTheme.Title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="0dp"
+        android:text="만족도" />
+
+    <me.zhanghai.android.materialratingbar.MaterialRatingBar
+        android:id="@+id/restaurantFormRating"
+        style="@style/Widget.MaterialRatingBar.RatingBar"
+        android:layout_width="170dp"
+        android:layout_height="41dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="0dp"
         android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp"
         android:maxHeight="24dp"
         android:minHeight="24dp" />
 
@@ -28,6 +36,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
+        android:lines="4"
+        android:gravity="top"
         android:hint="@string/hint_review" />
 
     <LinearLayout

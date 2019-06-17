@@ -1,7 +1,4 @@
 apply plugin: 'com.android.application'
-apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-android-extensions'
-apply plugin: 'org.jetbrains.kotlin.android.extensions'
 
 android {
     testBuildType "release"
@@ -18,7 +15,7 @@ android {
         vectorDrawables.useSupportLibrary true
 
         lintOptions {
-          disable 'InvalidPackage'
+            disable 'InvalidPackage'
         }
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -33,12 +30,13 @@ android {
     }
 }
 
-androidExtensions {
-    experimental = true
+repositories {
+    google()
 }
 
+/**androidExtensions {experimental = true}*/
+
 dependencies {
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.31"
 
     // Firestore
     implementation 'com.google.firebase:firebase-core:16.0.9'
@@ -52,6 +50,7 @@ dependencies {
     implementation 'com.firebaseui:firebase-ui-auth:4.3.2'
 
     // Support Libs
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'androidx.appcompat:appcompat:1.0.0'
     implementation 'androidx.vectordrawable:vectordrawable-animated:1.0.0'
     implementation 'androidx.cardview:cardview:1.0.0'
@@ -61,6 +60,7 @@ dependencies {
     implementation 'androidx.media:media:1.0.0'
     implementation 'androidx.recyclerview:recyclerview:1.0.0'
     implementation 'androidx.multidex:multidex:2.0.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
 
     // Android architecture components
     implementation 'androidx.lifecycle:lifecycle-runtime:2.0.0'
@@ -71,6 +71,8 @@ dependencies {
     implementation 'me.zhanghai.android.materialratingbar:library:1.3.2'
     implementation 'com.github.bumptech.glide:glide:3.7.0'
 
+    testImplementation 'junit:junit:4.12'
+
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0'
     androidTestImplementation 'androidx.test.espresso:espresso-contrib:3.1.0'
     androidTestImplementation 'androidx.test:rules:1.1.0'
@@ -80,6 +82,8 @@ dependencies {
     androidTestImplementation 'org.hamcrest:hamcrest-library:1.3'
     androidTestImplementation 'com.google.firebase:firebase-auth:17.0.0'
 
+    implementation 'com.google.android.gms:play-services-maps:16.1.0'
+    implementation 'com.google.android.gms:play-services-location:16.0.0'
 }
 
 apply plugin: 'com.google.gms.google-services'

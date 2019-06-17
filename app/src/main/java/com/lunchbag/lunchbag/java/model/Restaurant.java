@@ -13,6 +13,7 @@ public class Restaurant {
     public static final String FIELD_PRICE = "price";
     public static final String FIELD_POPULARITY = "numRatings";
     public static final String FIELD_AVG_RATING = "avgRating";
+    public static final String FIELD_CONGESTION = "avgRating";
 
     private String name;
     private String place;
@@ -72,6 +73,14 @@ public class Restaurant {
     }
 
     public void setPrice(int price) {
+        this.price = price;
+    }
+
+    public int getCong() {
+        return price;
+    }
+
+    public void setCong(int price) {
         this.price = price;
     }
 

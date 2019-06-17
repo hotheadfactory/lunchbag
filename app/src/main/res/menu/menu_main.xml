@@ -10,4 +10,8 @@
         android:id="@+id/menu_add_items"
         android:title="@string/add_random_items" />
 
+    <item
+        android:id="@+id/menu_find_location"
+        android:title="@string/find_nearest_out" />
+
 </menu>

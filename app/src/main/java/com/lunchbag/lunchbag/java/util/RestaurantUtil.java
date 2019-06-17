@@ -66,11 +66,14 @@ public class RestaurantUtil {
 
         int[] prices = new int[]{1, 2, 3, 4, 5, 6};
 
+        int[] congestion = new int[]{1, 2, 3, 4, 5};
+
         restaurant.setName(getRandomName(random));
         restaurant.setPlace(getRandomString(places, random));
         restaurant.setCategory(getRandomString(categories, random));
         restaurant.setPhoto(getRandomImageUrl(random));
         restaurant.setPrice(getRandomInt(prices, random));
+        restaurant.setCong(getRandomInt(congestion, random));
         restaurant.setNumRatings(random.nextInt(20));
 
         // Note: average rating intentionally not set
@@ -118,7 +121,7 @@ public class RestaurantUtil {
     }
 
     private static String getRandomName(Random random) {
-        return getRandomString(NAME_FIRST_WORDS, random) + " "
+        return getRandomString(NAME_FIRST_WORDS, random)
                 + getRandomString(NAME_SECOND_WORDS, random);
     }
 

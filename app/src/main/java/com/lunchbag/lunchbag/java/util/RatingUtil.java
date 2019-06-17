@@ -65,7 +65,7 @@ public class RatingUtil {
         String text = REVIEW_CONTENTS[(int) Math.floor(score)];
 
         rating.setUserId(UUID.randomUUID().toString());
-        rating.setUserName("Random User");
+        rating.setUserName("익명");
         rating.setRating(score);
         rating.setText(text);
 

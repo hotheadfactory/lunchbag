@@ -39,7 +39,8 @@
     <string name="message_no_reviews">리뷰가 없습니다. 첫 리뷰를 남겨 보세요!</string>
     <string name="hint_review">식사는 어떠셨나요?</string>
     <string name="submit">제출</string>
-    <string name="filter_add_review">리뷰 추가</string>
+    <string name="filter_add_review">음식점 평가</string>
+    <string name="find_nearest_out">가까운 상권 찾기</string>
 
     <string name="title_sign_in_error">로그인 오류</string>
     <string name="message_no_network">네트워크 연결 없음</string>
@@ -104,4 +105,7 @@
         <item>@string/sort_by_popularity</item>
         <item>@string/sort_by_price</item>
     </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
